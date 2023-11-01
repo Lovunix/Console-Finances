@@ -123,25 +123,31 @@ console.log("Total " + totals)
 // (Total/(Number of months - 1))
 
 
-mvalue = (parseInt(finances[0][1]))
+mvalue =  (parseInt(finances[0][1]))
 console.log("Show me the first value" + mvalue)
 totalaverage = 0
 
 for (var i=0; i < finances.length; i++) {
   var months = finances[i][0];
-  // if (mvalue > 0) {
+  var montlydifference = parseInt(mvalue - finances[i][1]); 
+  console.log( months +  " month value " + montlydifference );
+  montlydifference + parseInt(finances[i][1])
+  console.log(montlydifference)
+  // var newmvalue = parseInt(finances[i][1]);
+  // console.log("SUMAR " + newmvalue);
+  // var subaverage = parseInt(montlydifference + newmvalue);
+  // console.log("SUBAVERAGE   " +  subaverage);
+
+  };
+
+
+
+
+    // if (mvalue > 0) {
   // var montlydifference =parseInt(mvalue + finances[i][1]);
   // } else {
   //   var montlydifference =parseInt(mvalue - finances[i][1]);
   // };
-  var montlydifference = parseInt(mvalue - finances[i][1]); 
-  var newmvalue = parseInt(finances[i][1]);
-  console.log("SUMAR " + newmvalue);
-  console.log( months +  " month value " + montlydifference );
-  var subaverage = parseInt(montlydifference + newmvalue);
-  console.log("SUBAVERAGE" +  subaverage);
-
-  };
   // var subaverage = montlydifference + mvalue
   // console.log("diference + sum " + subaverage)
   // totalaverage += subaverage
