@@ -123,80 +123,19 @@ console.log("Total " + totals)
 // (Total/(Number of months - 1))
 
 
-mvalue =  (parseInt(finances[0][1]))
-console.log("Show me the first value" + mvalue)
+mvalue = (parseInt(finances[0][1]))
+//console.log("Show me the first value" + mvalue)
 totalaverage = 0
 
 for (var i=0; i < finances.length; i++) {
   var months = finances[i][0];
-  var montlydifference = parseInt(mvalue - finances[i][1]); 
-  console.log( months +  " month value " + montlydifference );
-  montlydifference + parseInt(finances[i][1])
-  console.log(montlydifference)
-  // var newmvalue = parseInt(finances[i][1]);
-  // console.log("SUMAR " + newmvalue);
-  // var subaverage = parseInt(montlydifference + newmvalue);
-  // console.log("SUBAVERAGE   " +  subaverage);
-
+  var montlydifference = parseInt(mvalue - finances[i][1]);
+  totalaverage += montlydifference;
+  var mvalue = finances[i][1];
+  //console.log("the value to rest " +  mvalue) 
+  //console.log(months + "  " + montlydifference);
   };
-
-
-
-
-    // if (mvalue > 0) {
-  // var montlydifference =parseInt(mvalue + finances[i][1]);
-  // } else {
-  //   var montlydifference =parseInt(mvalue - finances[i][1]);
-  // };
-  // var subaverage = montlydifference + mvalue
-  // console.log("diference + sum " + subaverage)
-  // totalaverage += subaverage
-  // console.log( months +  " month value " + montlydifference )
-
-
-//console.log(  "Average Change: " + ((totalaverage / 86) - 1) )
-
-  
-
-// var  access = parseInt(finances[47][1])
-// console.log(access)
-// // // var profits = parseInt(access[1])
-// // // var totalprofits = 0
-// // console.log(profits)
-
-// for (var i=0; i < access.length; i++){
-//     //if (profits >= 0 )
-//     console.log("test" + access)
-// }
-// console.log("test" + profits[i])
-// console.log(totalprofits)
-
-// for (var i=0; i < profits.length; i++) {
-//   //var months = i++
-//   //if (months === finances.length)
-// console.log("Total months " + profits);
-// };
-// // for (var i=0; i <= profits.length; i++){
-//     //var total  = i++
-// console.log("test" + profits[i]);
-// };
-// // total = 0
-
-
-// for (let i=0; prices.length; i++)
-//   // total += prices[i];
-//   // if (finances[0][1] > 0 );
-    // console.log(prices[1])
-
-
-//  if (access[1] >0 )
-
-// // for (var i=0; i <= finances.length; i++) {
-// //    profits = console.log(finances[1])
-// //     console.log(profits[1])
-// // }
-
-// /// Calculating losses
+  console.log("Average Change: "  + (totalaverage / 86));
 
 
 
