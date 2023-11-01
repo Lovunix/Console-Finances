@@ -97,12 +97,66 @@ console.log("________________________")
 
 /// Total numbers of months counting the number of objets/elemetns I don't undertan yet the differnce into the array
 
-for (var i=0; i <= finances.length; i++){
+for (let i=0; i <= finances.length; i++){
   var months = i++
   if (months === finances.length)
     console.log("Total months " + months);
 };
 
+/// Calculating 
+
+totals = 0
+
+for (var i=0; i < finances.length; i++){
+  //if (finances[i][1] > 0)
+  totals += finances[i][1];
+  //console.log(access)
+}
+
+console.log("Total " + totals)
+
+
+
+
+// var  access = parseInt(finances[47][1])
+// console.log(access)
+// // // var profits = parseInt(access[1])
+// // // var totalprofits = 0
+// // console.log(profits)
+
+// for (var i=0; i < access.length; i++){
+//     //if (profits >= 0 )
+//     console.log("test" + access)
+// }
+// console.log("test" + profits[i])
+// console.log(totalprofits)
+
+// for (var i=0; i < profits.length; i++) {
+//   //var months = i++
+//   //if (months === finances.length)
+// console.log("Total months " + profits);
+// };
+// // for (var i=0; i <= profits.length; i++){
+//     //var total  = i++
+// console.log("test" + profits[i]);
+// };
+// // total = 0
+
+
+// for (let i=0; prices.length; i++)
+//   // total += prices[i];
+//   // if (finances[0][1] > 0 );
+    // console.log(prices[1])
+
+
+//  if (access[1] >0 )
+
+// // for (var i=0; i <= finances.length; i++) {
+// //    profits = console.log(finances[1])
+// //     console.log(profits[1])
+// // }
+
+// /// Calculating losses
 
 
 
