@@ -86,3 +86,23 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+//Log Title
+console.log("Financial Analysis ");
+
+//Log dots
+console.log("________________________")
+
+
+/// Total numbers of months counting the number of objets/elemetns I don't undertan yet the differnce into the array
+
+for (var i=0; i <= finances.length; i++){
+  var months = i++
+  if (months === finances.length)
+    console.log("Total months " + months);
+};
+
+
+
+
