@@ -103,11 +103,11 @@ for (let i=0; i <= finances.length; i++){
     console.log("Total months " + months);
 };
 
-/// Calculating 
+/// Calculating Total
 
 totals = 0
 
-for (var i=0; i < finances.length; i++){
+for (let i=0; i < finances.length; i++){
   //if (finances[i][1] > 0)
   totals += finances[i][1];
   //console.log(access)
@@ -115,8 +115,42 @@ for (var i=0; i < finances.length; i++){
 
 console.log("Total " + totals)
 
+/// Calculation Average
+
+// he montlydifference of the changes in Profit/Losses over the entire period.
+
+// You will need to track what the total change in Profit/Losses are from month to month and then find the montlydifference.
+// (Total/(Number of months - 1))
 
 
+mvalue = (parseInt(finances[0][1]))
+console.log("Show me the first value" + mvalue)
+totalaverage = 0
+
+for (var i=0; i < finances.length; i++) {
+  var months = finances[i][0];
+  // if (mvalue > 0) {
+  // var montlydifference =parseInt(mvalue + finances[i][1]);
+  // } else {
+  //   var montlydifference =parseInt(mvalue - finances[i][1]);
+  // };
+  var montlydifference = parseInt(mvalue - finances[i][1]); 
+  var newmvalue = parseInt(finances[i][1]);
+  console.log("SUMAR " + newmvalue);
+  console.log( months +  " month value " + montlydifference );
+  var subaverage = parseInt(montlydifference + newmvalue);
+  console.log("SUBAVERAGE" +  subaverage);
+
+  };
+  // var subaverage = montlydifference + mvalue
+  // console.log("diference + sum " + subaverage)
+  // totalaverage += subaverage
+  // console.log( months +  " month value " + montlydifference )
+
+
+//console.log(  "Average Change: " + ((totalaverage / 86) - 1) )
+
+  
 
 // var  access = parseInt(finances[47][1])
 // console.log(access)
