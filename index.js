@@ -139,7 +139,9 @@ var montdec = ""
 for (var i=1; i < finances.length; i++) {
   /// matching months
   var months = finances[i][0];
-  /// substracting difference between months
+  /// substracting difference between months /// Two important things here: 1 Javascript doesn't care if it's a negative number // great if you know this advance
+  /// second -- value possition meaning finances - mvalue /// not the other way around  /// why well if javascript doesn't care if it's negative 
+  /// the only way to push the right result is applying proper maths  rules. 
   var montlydifference = parseInt(finances[i][1] - mvalue);
   /// SUM total overall
   totalaverage += montlydifference;
