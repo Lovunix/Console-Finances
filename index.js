@@ -160,8 +160,8 @@ for (var i=1; i < finances.length; i++) {
 
   };
   console.log("Average Change: "  + (totalaverage / (finances.length -1)) ); /// print average was a nightmare because I had the values in the wrong way around, just need it to switch them 
-  console.log("Greatest Increase in Profits/Losses:" +  months + " " + montinc ) ///print max increase
-  console.log("Greatest Decrease in Profits/Losses:" + minincrease + " " + montdec) /// print min increae
+  console.log("Greatest Increase in Profits/Losses:  " +  maxincrease + " " + montinc ) ///print max increase
+  console.log("Greatest Decrease in Profits/Losses:  " + minincrease + "  " + montdec) /// print min increae
 
 // var min = Math.min([montlydifference]), /// why this didn't work ???? sad! 
 //     max = Math.max([montlydifference]);
