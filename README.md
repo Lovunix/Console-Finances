@@ -13,7 +13,7 @@ This repository is intended for anyone who wants to learn more about JavaScript 
 
 To get started, simply clone this repository to your local machine:
 
-git clone  git@github.com:Lovunix/Console-Finances.git
+" git clone  git@github.com:Lovunix/Console-Finances.git "
 
 Once you have cloned the repository, you can inspect each algorithm to learn more about it and how to use it. You can also run the code examples to see how the algorithms work in practice.
 
