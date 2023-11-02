@@ -126,19 +126,32 @@ console.log("Total " + totals)
 mvalue = (parseInt(finances[0][1]))
 //console.log("Show me the first value" + mvalue)
 totalaverage = 0
+var maxincrease =  0
+var minincrease  = 0
+var montinc = ""
+var montdec = ""
+
 
 for (var i=1; i < finances.length; i++) {
   var months = finances[i][0];
   var montlydifference = parseInt(finances[i][1] - mvalue);
   totalaverage += montlydifference;
   var mvalue = finances[i][1];
-  //console.log("the value to rest " +  mvalue) 
-  //console.log(months + "  " + montlydifference + "   " + totalaverage);
+  // console.log("the value to rest " +  mvalue) 
+  // console.log(months + "  " + montlydifference + "   " + totalaverage);
+  if (montlydifference > maxincrease) {
+    maxincrease = montlydifference
+    montinc = months
+  } else if (montlydifference < minincrease) {
+    minincrease = montlydifference
+    montdec =months
+  }
+  
+
   };
   console.log("Average Change: "  + (totalaverage / (finances.length -1)) );
+  console.log("Greatest Increase in Profits/Losses:" +  months + " " + montinc )
+  console.log("Greatest Decrease in Profits/Losses:" + minincrease + " " + montdec)
 
-////   Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-
-console.log("Greatest Increase in Profits/Losses: " + (Math.max(totalaverage)))
-
-////   Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
+// var min = Math.min([montlydifference]),
+//     max = Math.max([montlydifference]);
