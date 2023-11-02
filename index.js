@@ -95,15 +95,17 @@ console.log("Financial Analysis ");
 console.log("________________________")
 
 
-/// Total numbers of months counting the number of objets/elemetns I don't undertan yet the differnce into the array
+/// Total numbers of months counting the number of objets/elemetns I don't undertan yet the differnce into the array 
+///probably I could do something like finances.legth value and that it, but instead I complicated my life!
+
 
 for (let i=0; i <= finances.length; i++){
   var months = i++
   if (months === finances.length)
     console.log("Total months " + months);
 };
-
-/// Calculating Total
+ 
+/// Calculating Total 
 
 totals = 0
 
@@ -115,6 +117,8 @@ for (let i=0; i < finances.length; i++){
 
 console.log("Total " + totals)
 
+
+
 /// Calculation Average
 
 // he montlydifference of the changes in Profit/Losses over the entire period.
@@ -125,7 +129,7 @@ console.log("Total " + totals)
 
 mvalue = (parseInt(finances[0][1]))
 //console.log("Show me the first value" + mvalue)
-totalaverage = 0
+totalaverage = 0 
 var maxincrease =  0
 var minincrease  = 0
 var montinc = ""
@@ -133,15 +137,19 @@ var montdec = ""
 
 
 for (var i=1; i < finances.length; i++) {
+  /// matching months
   var months = finances[i][0];
+  /// substracting difference between months
   var montlydifference = parseInt(finances[i][1] - mvalue);
+  /// SUM total overall
   totalaverage += montlydifference;
+  /// reseting value
   var mvalue = finances[i][1];
-  // console.log("the value to rest " +  mvalue) 
-  // console.log(months + "  " + montlydifference + "   " + totalaverage);
+  /// instead of doing this again lets extract the max value from the substracting process to find the max maxincrease value and month
   if (montlydifference > maxincrease) {
     maxincrease = montlydifference
     montinc = months
+  /// instead of doing this again lets extract the max value from the substracting process to find the max minincrease value and month
   } else if (montlydifference < minincrease) {
     minincrease = montlydifference
     montdec =months
@@ -149,9 +157,9 @@ for (var i=1; i < finances.length; i++) {
   
 
   };
-  console.log("Average Change: "  + (totalaverage / (finances.length -1)) );
-  console.log("Greatest Increase in Profits/Losses:" +  months + " " + montinc )
-  console.log("Greatest Decrease in Profits/Losses:" + minincrease + " " + montdec)
+  console.log("Average Change: "  + (totalaverage / (finances.length -1)) ); /// print average was a nightmare because I had the values in the wrong way around, just need it to switch them 
+  console.log("Greatest Increase in Profits/Losses:" +  months + " " + montinc ) ///print max increase
+  console.log("Greatest Decrease in Profits/Losses:" + minincrease + " " + montdec) /// print min increae
 
-// var min = Math.min([montlydifference]),
+// var min = Math.min([montlydifference]), /// why this didn't work ???? sad! 
 //     max = Math.max([montlydifference]);
